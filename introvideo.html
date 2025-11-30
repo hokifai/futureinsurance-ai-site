@@ -50,27 +50,11 @@
             text-align: center;
             color: white;
         }
-        
-        /* Fullscreen iframe styling */
-        .video-iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 1rem;
-        }
-        
-        /* Hidden class for transitions */
-        .hidden {
-            display: none;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Modal for Demo Request -->
+    <!-- Modal for Demo Request (Reused from index.html) -->
     <div id="demoModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden z-50 transition-opacity duration-300">
         <div class="flex items-center justify-center min-h-screen">
             <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-lg m-4">
@@ -103,7 +87,7 @@
         </div>
     </div>
     
-    <!-- Header -->
+    <!-- Header (Reused from index.html) -->
     <header class="sticky top-0 bg-white shadow-md z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-extrabold text-gray-900 tracking-tight">
@@ -111,9 +95,13 @@
             </a>
             
             <nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                <!-- Links need to point back to sections on index.html -->
                 <a href="index.html#solutions" class="hover:text-sky-500 transition duration-150">Solutions</a>
                 <a href="index.html#market" class="hover:text-sky-500 transition duration-150">Market Focus</a>
+                
+                <!-- Active Link -->
                 <a href="introvideo.html" class="hover:text-sky-500 transition duration-150 font-bold text-blue-600 border-b-2 border-blue-600">Video Simulator</a>
+                
                 <a href="training.html" class="hover:text-sky-500 transition duration-150">Training</a>
                 <a href="about.html" class="hover:text-sky-500 transition duration-150">About Us</a>
             </nav>
@@ -136,43 +124,22 @@
                 Watch the exclusive simulator video to see our Autonomous Agents in action, handling claims and defending against fraud in real-time.
             </p>
 
-            <!-- Video Player - Two Options -->
+            <!-- Video Player Placeholder -->
             <div class="video-container mx-auto max-w-5xl">
-                <!-- Option 1: Direct Embed (may not work due to Synthesia restrictions) -->
-                <iframe 
-                    id="synthesiaVideo"
-                    class="video-iframe hidden"
-                    src=""
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                
-                <!-- Option 2: Placeholder with instructions -->
-                <div id="videoPlaceholder" class="video-placeholder">
+                <div class="video-placeholder">
                     <div class="space-y-4">
                         <!-- Icon for video playback -->
                         <svg class="w-20 h-20 text-sky-400 mx-auto" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 2l12 6v12L6 14V2zm14 7.2l-10 5V3.8l10 5.4z" />
                             <path d="M12 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
                         </svg>
-                        <p class="text-2xl font-bold">Video Simulator</p>
-                        <p class="text-gray-300 max-w-md mx-auto">Click below to attempt to load the Synthesia video. If it doesn't work, the video may require direct login access.</p>
-                        <button onclick="loadSynthesiaVideo()" class="bg-sky-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-sky-600 transition duration-300 mt-4">
-                            Load Synthesia Video
+                        <p class="text-2xl font-bold">Video Simulator Placeholder</p>
+                        <p class="text-gray-300">This area represents where your embedded video (e.g., YouTube/Vimeo iframe) would go.</p>
+                        <button class="bg-sky-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-sky-600 transition duration-300 mt-4">
+                            Play Video (Simulated)
                         </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Alternative Download Instructions -->
-            <div id="alternativeInstructions" class="mt-6 p-4 bg-yellow-50 rounded-lg hidden max-w-5xl mx-auto">
-                <h4 class="font-bold text-yellow-800 mb-2">Alternative Setup Required</h4>
-                <p class="text-yellow-700 text-sm">
-                    The Synthesia video cannot be directly embedded. Please:<br>
-                    1. Download the video from your Synthesia account<br>
-                    2. Host it on a platform like YouTube, Vimeo, or your own server<br>
-                    3. Replace the iframe source with your hosted video URL
-                </p>
             </div>
             
             <div class="text-center mt-12 pt-8 border-t border-gray-200">
@@ -185,7 +152,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (Reused from index.html) -->
     <footer class="bg-gray-800 text-white py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-2xl font-extrabold text-white tracking-tight mb-4">
@@ -200,32 +167,13 @@
         </div>
     </footer>
     <script>
-        // JavaScript for Modal Functionality
+        // JavaScript for Modal Functionality (Reused from index.html)
         const demoModal = document.getElementById('demoModal');
         const modalMessage = document.getElementById('modalMessage');
         function openModal() { demoModal.classList.remove('hidden'); modalMessage.classList.add('hidden'); }
         function closeModal() { demoModal.classList.add('hidden'); }
         function handleDemoSubmit(event) { event.preventDefault(); console.log('Demo Request Submitted'); event.target.reset(); modalMessage.textContent = "Thank you! We will contact you shortly."; modalMessage.classList.remove('hidden'); setTimeout(closeModal, 4000); }
         demoModal.addEventListener('click', (e) => { if (e.target === demoModal) { closeModal(); } });
-
-        // Video Loading Function
-        function loadSynthesiaVideo() {
-            const videoIframe = document.getElementById('synthesiaVideo');
-            const videoPlaceholder = document.getElementById('videoPlaceholder');
-            const alternativeInstructions = document.getElementById('alternativeInstructions');
-            
-            // Try to load the Synthesia video
-            videoIframe.src = "https://app.synthesia.io/#/video/16c79fb4-0e73-4895-a747-6971ceb4d73a?version=1";
-            
-            // Show the iframe and hide placeholder
-            videoIframe.classList.remove('hidden');
-            videoPlaceholder.classList.add('hidden');
-            
-            // Show alternative instructions after a delay (in case it doesn't work)
-            setTimeout(() => {
-                alternativeInstructions.classList.remove('hidden');
-            }, 3000);
-        }
     </script>
 </body>
 </html>

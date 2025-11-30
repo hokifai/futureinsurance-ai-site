@@ -70,6 +70,10 @@
             <nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
                 <a href="#solutions" class="hover:text-sky-500 transition duration-150">Solutions</a>
                 <a href="#market" class="hover:text-sky-500 transition duration-150">Market Focus</a>
+                
+                <!-- NEW LINK: Video Simulator -->
+                <a href="introvideo.html" class="hover:text-sky-500 transition duration-150 font-bold text-blue-600">Video Simulator</a>
+                
                 <a href="training.html" class="hover:text-sky-500 transition duration-150">Training</a>
                 <a href="about.html" class="hover:text-sky-500 transition duration-150">About Us</a>
             </nav>
@@ -94,8 +98,14 @@
                 <p class="text-xl sm:text-2xl max-w-4xl mx-auto mb-10 text-gray-300">
                     FutureInsurance.ai is the B2B Agentic AI platform that enables zero-touch insurance. We are engineered to eliminate leakage with Autonomous Fraud Defense and deliver immediate policyholder satisfaction with Instant Claims Resolution across the high-growth ASEAN and GCC markets.
                 </p>
+                
+                <!-- NEW BUTTON: Watch the AI Strategy Video -->
+                <a href="introvideo.html" class="px-8 py-3.5 bg-green-500 text-lg text-white font-bold rounded-xl shadow-xl hover:bg-green-600 transition duration-300 transform hover:scale-105 mr-4">
+                    Watch the AI Strategy Video &rarr;
+                </a>
+                
                 <button onclick="openModal()" class="px-8 py-3.5 bg-sky-500 text-lg text-white font-bold rounded-xl shadow-xl hover:bg-sky-600 transition duration-300 transform hover:scale-105">
-                    Request a Demo &rarr;
+                    Request a Demo
                 </button>
             </div>
         </section>
@@ -199,7 +209,7 @@
         </div>
     </footer>
     <script>
-        // JavaScript for Modal Functionality (omitted for brevity)
+        // JavaScript for Modal Functionality
         const demoModal = document.getElementById('demoModal');
         const modalMessage = document.getElementById('modalMessage');
         function openModal() { demoModal.classList.remove('hidden'); modalMessage.classList.add('hidden'); }

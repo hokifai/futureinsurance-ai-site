@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Strategy Video | FutureInsurance.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root {
+            --color-primary: #0f172a; /* Slate 900 */
+            --color-accent: #0ea5e9; /* Sky 500 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Slate 50 */
+        }
+        /* Custom styling for the AI gradient effect */
+        .ai-gradient-text {
+            background: linear-gradient(90deg, #0ea5e9, #38bdf8, #a5f3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .ai-icon-bg {
+            background-color: var(--color-accent);
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+        }
+
+        /* Responsive Container for the Video Placeholder (16:9 aspect ratio) */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+            height: 0;
+            overflow: hidden;
+            background-color: #0f172a; /* Dark background */
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Modal for Demo Request (Reused from index.html) -->
+    <div id="demoModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden z-50 transition-opacity duration-300">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-lg m-4">
+                <div class="flex justify-between items-center pb-3">
+                    <h3 class="text-2xl font-bold text-gray-900">Request a Live Demo</h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <p class="text-gray-600 mb-6">Learn how our Agentic AI platform can cut your costs and accelerate claims processing.</p>
+                <form onsubmit="handleDemoSubmit(event)">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="name" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 focus:ring-sky-500 focus:border-sky-500 transition duration-150">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Work Email</label>
+                        <input type="email" id="email" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 focus:ring-sky-500 focus:border-sky-500 transition duration-150">
+                    </div>
+                    <div class="mb-6">
+                        <label for="company" class="block text-sm font-medium text-gray-700">Company Name</label>
+                        <input type="text" id="company" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 focus:ring-sky-500 focus:border-sky-500 transition duration-150">
+                    </div>
+                    <button type="submit" class="w-full bg-sky-500 text-white py-3 rounded-lg font-semibold hover:bg-sky-600 transition duration-300 shadow-md">
+                        Submit Request
+                    </button>
+                </form>
+                <p id="modalMessage" class="mt-4 text-center text-sm text-green-600 hidden">Thank you! We will contact you shortly.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header (Reused from index.html) -->
+    <header class="sticky top-0 bg-white shadow-md z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-gray-900 tracking-tight">
+                Future<span class="ai-gradient-text">Insurance.ai</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                <!-- Links need to point back to sections on index.html -->
+                <a href="index.html#solutions" class="hover:text-sky-500 transition duration-150">Solutions</a>
+                <a href="index.html#market" class="hover:text-sky-500 transition duration-150">Market Focus</a>
+                
+                <!-- Active Link -->
+                <a href="introvideo.html" class="hover:text-sky-500 transition duration-150 font-bold text-blue-600 border-b-2 border-blue-600">Video Simulator</a>
+                
+                <a href="training.html" class="hover:text-sky-500 transition duration-150">Training</a>
+                <a href="about.html" class="hover:text-sky-500 transition duration-150">About Us</a>
+            </nav>
+            
+            <button onclick="openModal()" class="px-5 py-2 bg-sky-500 text-white font-semibold rounded-lg shadow-lg hover:bg-sky-600 transition duration-300 hidden md:inline-block">
+                Request a Demo
+            </button>
+            <button class="md:hidden text-gray-600 hover:text-sky-500 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 text-center">
+                Deep Dive: Agentic AI in Insurance
+            </h1>
+            <p class="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+                Watch the exclusive simulator video to see our Autonomous Agents in action, handling claims and defending against fraud in real-time.
+            </p>
+
+            <!-- Video Player Placeholder -->
+            <div class="video-container mx-auto max-w-5xl">
+                <div class="video-placeholder">
+                    <div class="space-y-4">
+                        <!-- Icon for video playback -->
+                        <svg class="w-20 h-20 text-sky-400 mx-auto" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 2l12 6v12L6 14V2zm14 7.2l-10 5V3.8l10 5.4z" />
+                            <path d="M12 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
+                        </svg>
+                        <p class="text-2xl font-bold">Video Simulator Placeholder</p>
+                        <p class="text-gray-300">This area represents where your embedded video (e.g., YouTube/Vimeo iframe) would go.</p>
+                        <button class="bg-sky-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-sky-600 transition duration-300 mt-4">
+                            Play Video (Simulated)
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 pt-8 border-t border-gray-200">
+                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to See it Live?</h3>
+                 <button onclick="openModal()" class="px-10 py-4 bg-sky-500 text-white text-lg font-bold rounded-xl shadow-xl hover:bg-sky-600 transition duration-300 transform hover:scale-105">
+                     Request a Live Demo
+                 </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer (Reused from index.html) -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-2xl font-extrabold text-white tracking-tight mb-4">
+                Future<span class="text-sky-400">Insurance.ai</span>
+            </p>
+            <nav class="flex justify-center space-x-6 text-sm mb-4">
+                <a href="#" class="hover:text-sky-400 transition duration-150">Privacy Policy</a>
+                <a href="#" class="hover:text-sky-400 transition duration-150">Terms of Service</a>
+                <a href="#" class="hover:text-sky-400 transition duration-150">Careers</a>
+            </nav>
+            <p class="text-gray-400 text-sm">&copy; 2025 FutureInsurance.ai. All rights reserved. Built for the InsurTech Future.</p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript for Modal Functionality (Reused from index.html)
+        const demoModal = document.getElementById('demoModal');
+        const modalMessage = document.getElementById('modalMessage');
+        function openModal() { demoModal.classList.remove('hidden'); modalMessage.classList.add('hidden'); }
+        function closeModal() { demoModal.classList.add('hidden'); }
+        function handleDemoSubmit(event) { event.preventDefault(); console.log('Demo Request Submitted'); event.target.reset(); modalMessage.textContent = "Thank you! We will contact you shortly."; modalMessage.classList.remove('hidden'); setTimeout(closeModal, 4000); }
+        demoModal.addEventListener('click', (e) => { if (e.target === demoModal) { closeModal(); } });
+    </script>
+</body>
+</html>

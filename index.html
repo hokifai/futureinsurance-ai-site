@@ -122,16 +122,18 @@
             <div class="max-w-3xl mx-auto px-4">
                 <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl text-gray-900">
                     <h3 class="text-2xl font-bold mb-6 text-center">Schedule Your Personalized Demo</h3>
-                    <form action="https://formspree.io/f/futureinsuranceai@gmail.com" method="POST" class="space-y-4">
-                        <input type="hidden" name="_subject" value="Service Inquiry from FutureInsurance.ai">
+                    
+                    <form action="https://formspree.io/f/mwvnblva" method="POST" class="space-y-4">
+                        <input type="hidden" name="_subject" value="New Demo Request: FutureInsurance.ai">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200">
-                            <input type="email" name="email" placeholder="Work Email" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200">
+                            <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-sky-500">
+                            <input type="email" name="email" placeholder="Work Email" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-sky-500">
                         </div>
-                        <input type="text" name="company" placeholder="Company Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200">
-                        <textarea name="message" rows="4" placeholder="How can we help?" class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200"></textarea>
-                        <button type="submit" class="w-full py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition shadow-lg text-lg uppercase">
-                            Submit Inquiry
+                        <input type="text" name="company" placeholder="Company Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-sky-500">
+                        <textarea name="message" rows="4" placeholder="Briefly describe your current AI or automation goals..." class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-sky-500"></textarea>
+                        
+                        <button type="submit" class="w-full py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition shadow-lg text-lg uppercase tracking-wider">
+                            Request Demo
                         </button>
                     </form>
                 </div>
@@ -154,13 +156,8 @@
 
     <script>
         function toggleTraining() {
-            const modal = document.getElementById('trainingModal');
-            modal.classList.toggle('active');
-            if (modal.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
+            // Placeholder logic for future training modal implementation
+            alert("Our AI Training Programs for Insurers are launching soon. Check back shortly!");
         }
     </script>
 </body>

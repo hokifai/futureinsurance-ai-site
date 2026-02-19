@@ -3,149 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Training | FutureInsurance.ai</title>
+    <title>FutureInsurance.ai | Goal-Driven Automation for Insurers</title>
     <script src="https://cdn.tailwindcss.com"></script> 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         :root { --color-primary: #0f172a; --color-accent: #0ea5e9; }
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
         .ai-gradient-text {
             background: linear-gradient(90deg, #0ea5e9, #38bdf8, #a5f3fc);
             -webkit-background-clip: text;
-            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+        .profit-killer-card { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
+        .profit-killer-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1rem; }
     </style>
 </head>
 <body>
 
-    <header class="sticky top-0 bg-white shadow-md z-40">
+    <header class="sticky top-0 bg-white border-b border-gray-100 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-extrabold text-gray-900 tracking-tight">
+            <a href="#" class="text-2xl font-extrabold text-gray-900 tracking-tight">
                 FutureInsurance<span class="ai-gradient-text">.ai</span>
             </a>
-            <nav class="hidden md:flex space-x-8 text-gray-600 font-medium text-sm">
-                <a href="index.html#solutions" class="hover:text-sky-500 transition">Solutions</a>
-                <a href="index.html#market" class="hover:text-sky-500 transition">Market Focus</a>
-                <span class="text-sky-500 font-bold border-b-2 border-sky-500">Training</span>
+            <nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                <a href="#solutions" class="hover:text-sky-500 transition">Solutions</a>
+                <a href="#vision" class="hover:text-sky-500 transition">Our Vision</a>
+                <a href="#market" class="hover:text-sky-500 transition">Market Focus</a>
+                <a href="training.html" class="hover:text-sky-500 transition">Training</a>
             </nav>
-            <a href="index.html" class="px-5 py-2 bg-sky-500 text-white font-semibold rounded-lg shadow-lg hover:bg-sky-600 transition hidden md:inline-block">
-                Back to Platform
-            </a>
+            <a href="#contact" class="px-5 py-2 bg-sky-500 text-white font-semibold rounded-lg shadow-lg hover:bg-sky-600 transition hidden md:inline-block">Partner with Us</a>
         </div>
     </header>
 
     <main>
-        <section class="py-16 bg-gray-50">
-            <div class="max-w-5xl mx-auto px-6">
-                <h1 class="text-4xl font-extrabold text-gray-900 mb-4 text-center">Training & Capability Building</h1>
-                <p class="text-xl text-center text-sky-600 font-semibold mb-12">Empower your team with Agentic AI expertise.</p>
-
-                <div class="bg-white shadow-xl rounded-2xl p-8 lg:p-12 border-t-8 border-sky-500">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Course Title: AI Innovation for Insurance Professionals</h2>
-
-                    <div class="mb-10">
-                        <p class="text-gray-700 leading-relaxed text-lg">
-                            The insurance industry is undergoing rapid transformation driven by the rise of artificial intelligence. From underwriting to claims management, customer engagement to risk analytics, AI is redefining value creation in the insurance ecosystem. This course provides insurance professionals with the knowledge, tools, and applied skills to leverage AI technologies for innovation, efficiency, and competitive advantage.
-                        </p>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-10 mb-12">
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                                <span class="w-8 h-8 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mr-3 text-sm">01</span>
-                                Objectives
-                            </h3>
-                            <ul class="space-y-3 text-gray-700 text-sm">
-                                <li class="flex items-start"><span class="text-sky-500 mr-2">•</span> Equip participants with a foundational and strategic understanding of AI technologies.</li>
-                                <li class="flex items-start"><span class="text-sky-500 mr-2">•</span> Develop the capability to apply AI for underwriting, risk modeling, and fraud detection.</li>
-                                <li class="flex items-start"><span class="text-sky-500 mr-2">•</span> Build practical skills in generative AI, Agentic AI, and custom modelling.</li>
-                                <li class="flex items-start"><span class="text-sky-500 mr-2">•</span> Foster a culture of responsible and ethical AI adoption (ESG).</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                                <span class="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3 text-sm">02</span>
-                                Learning Outcomes
-                            </h3>
-                            <ul class="space-y-3 text-gray-700 text-sm">
-                                <li class="flex items-start"><span class="text-green-500 mr-2">•</span> Explain business value of Agentic AI in insurance.</li>
-                                <li class="flex items-start"><span class="text-green-500 mr-2">•</span> Apply AI techniques to enhance operational efficiency.</li>
-                                <li class="flex items-start"><span class="text-green-500 mr-2">•</span> Design use cases involving custom AI models.</li>
-                                <li class="flex items-start"><span class="text-green-500 mr-2">•</span> Integrate responsible AI regulatory frameworks.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="border-t pt-10">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Course Structure</h3>
-                        
-                        <div class="mb-10 bg-slate-900 text-white p-8 rounded-xl shadow-lg">
-                            <h4 class="text-xl font-bold mb-2 text-sky-400">Structured Program (36 hours)</h4>
-                            <p class="text-slate-400 text-sm mb-6 italic">Delivered in collaboration with leading institutions of higher learning (12 Modules)</p>
-                            <div class="grid md:grid-cols-2 gap-x-8 gap-y-3">
-                                <ol class="list-decimal list-inside space-y-2 text-sm text-slate-200">
-                                    <li>Fundamentals of AI in Insurance</li>
-                                    <li>Data Strategy & Digital Transformation</li>
-                                    <li>Generative AI and LLMs</li>
-                                    <li>Agentic AI: The Next Frontier</li>
-                                    <li>Custom AI Modelling for Underwriting</li>
-                                    <li>Predictive Analytics & Actuarial Intelligence</li>
-                                </ol>
-                                <ol start="7" class="list-decimal list-inside space-y-2 text-sm text-slate-200">
-                                    <li>AI for Claims & Fraud Detection</li>
-                                    <li>AI-Enhanced Customer Personalization</li>
-                                    <li>Ethical & Responsible AI</li>
-                                    <li>Regulatory, Compliance & Governance</li>
-                                    <li>Emerging AI: Embedded to Autonomous</li>
-                                    <li class="font-bold text-sky-400">Capstone: AI Innovation Roadmap</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                            <h4 class="text-xl font-bold mb-2 text-gray-900">Short Courses (2-day programs)</h4>
-                            <p class="text-gray-500 text-sm mb-6">Targeted 16-hour specialized learning paths:</p>
-                            <div class="grid md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-gray-700">
-                                <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Generative AI for Product Development</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Agentic AI in Claims Automation</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Data Governance for Analytics</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> AI-Powered Customer Engagement</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Fraud Detection via Machine Learning</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> AI Ethics & Regulatory Compliance</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Custom AI Models with Low-Code Tools</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Predictive Modelling for Underwriting</li>
-                                </ul>
-                                <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> AI and ESG Risk Management</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Conversational AI for Services</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Reinforcement Learning in Risk Pricing</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> AI for Cyber Risk and Security</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Explainable AI in Decisions</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> AI-Powered Marketing & Distribution</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2"></span> Responsible AI Frameworks</li>
-                                    <li class="font-bold text-sky-600 flex items-center underline">Capstone: AI-Driven Processes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+        <section class="py-24 bg-gray-900 text-white text-center">
+            <div class="max-w-7xl mx-auto px-4">
+                <p class="text-sky-400 font-bold mb-4 tracking-widest uppercase text-sm">Goal-Driven Automation for Insurers</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight">
+                    Agentic AI Powering <br>
+                    <span class="ai-gradient-text">Autonomous Insurance Operations</span>
+                </h1>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto mb-12 text-gray-300 leading-relaxed">
+                    FutureInsurance.ai is the B2B Agentic AI platform that enables <span class="text-white font-semibold underline decoration-sky-500">zero-touch insurance</span>.
+                </p>
+                <div class="flex justify-center">
+                    <a href="#contact" class="px-8 py-4 bg-sky-500 text-white font-bold rounded-lg shadow-xl hover:bg-sky-600 transition text-lg">Scale Your Operations</a>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-gray-900 text-center">
-            <h2 class="text-3xl font-extrabold text-white mb-6">Empower Your Workforce</h2>
-            <a href="mailto:info@futureinsurance.ai" class="px-10 py-4 bg-sky-500 text-white text-lg font-bold rounded-xl shadow-2xl hover:bg-sky-600 transition inline-block">Request Enrollment Info</a>
+        <section id="solutions" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-sky-500 font-bold uppercase tracking-widest text-sm mb-2">Generating AI insights in the insurance value chain</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">Autonomous Solutions Delivering Measurable ROI</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                    <div class="bg-white p-8 rounded-xl border-t-4 border-red-500 profit-killer-card">
+                        <h3 class="text-xl font-bold mb-4">Autonomous Fraud Defense</h3>
+                        <p class="text-gray-600 text-sm">Our Agentic Fraud Engine independently investigates, flags, and blocks suspicious claims, cutting leakage by up to 25%.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border-t-4 border-sky-500 profit-killer-card">
+                        <h3 class="text-xl font-bold mb-4">Instant Claims Resolution</h3>
+                        <p class="text-gray-600 text-sm">Agents autonomously process straight-through claims, initiating payment or routing for review in minutes.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border-t-4 border-indigo-500 profit-killer-card">
+                        <h3 class="text-xl font-bold mb-4">Adaptive Underwriting</h3>
+                        <p class="text-gray-600 text-sm">Agentic Modules proactively adapt risk models and pricing in real-time based on market data.</p>
+                    </div>
+                    <a href="training.html" class="bg-white p-8 rounded-xl border-t-4 border-green-500 profit-killer-card block group">
+                        <h3 class="text-xl font-bold mb-4">AI Training & Upskilling</h3>
+                        <p class="text-gray-600 text-sm mb-4">Comprehensive programs for actuaries and executives to master Agentic AI deployment.</p>
+                        <span class="text-green-600 font-bold text-sm">View Curriculum →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="py-20 bg-gray-900 text-white">
+             <div class="max-w-3xl mx-auto px-4">
+                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl text-gray-900 text-center">
+                    <h3 class="text-2xl font-bold mb-6">Schedule Your Personalized Demo</h3>
+                    <form action="https://formspree.io/f/mwvnblva" method="POST" class="space-y-4">
+                        <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200">
+                        <button type="submit" class="w-full py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition uppercase tracking-wider">Request Demo</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-10 border-t border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <a href="index.html" class="text-2xl font-extrabold mb-4 inline-block">FutureInsurance<span class="text-sky-400">.ai</span></a>
-            <p class="text-gray-400 text-sm">&copy; 2026 FutureInsurance.ai. Built for the InsurTech Future.</p>
-        </div>
+    <footer class="bg-white py-12 text-center border-t border-gray-100">
+        <p class="text-2xl font-bold mb-2 tracking-tighter">FutureInsurance<span class="text-sky-500">.ai</span></p>
+        <p class="text-gray-400 text-xs uppercase tracking-widest">&copy; 2026 FutureInsurance.ai</p>
     </footer>
-
 </body>
 </html>

@@ -1,29 +1,97 @@
-<nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
-    <a href="#solutions" class="hover:text-sky-500 transition">Solutions</a>
-    <a href="#vision" class="hover:text-sky-500 transition">Our Vision</a>
-    <a href="#market" class="hover:text-sky-500 transition">Market Focus</a>
-    <a href="training.html" class="hover:text-sky-500 transition cursor-pointer">Training</a>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Training | FutureInsurance.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root { --color-primary: #0f172a; --color-accent: #0ea5e9; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .ai-gradient-text {
+            background: linear-gradient(90deg, #0ea5e9, #38bdf8, #a5f3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
 
-<div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500 profit-killer-card flex flex-col justify-between">
-    <div>
-        <h3 class="text-xl font-bold mb-4">AI Training & Upskilling</h3>
-        <p class="text-gray-600 text-sm mb-6">Comprehensive programs for actuaries and executives to master Agentic AI deployment.</p>
-    </div>
-    <a href="training.html" class="inline-block px-4 py-2 bg-green-50 text-green-700 font-bold rounded hover:bg-green-100 transition text-center text-sm">
-        Explore Course Modules →
-    </a>
-</div>
+    <header class="sticky top-0 bg-white shadow-md z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-gray-900 tracking-tight">
+                FutureInsurance<span class="ai-gradient-text">.ai</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-gray-600 font-medium text-sm">
+                <a href="index.html#solutions" class="hover:text-sky-500 transition">Solutions</a>
+                <a href="index.html#market" class="hover:text-sky-500 transition">Market Focus</a>
+                <span class="text-sky-500 font-bold border-b-2 border-sky-500">Training</span>
+            </nav>
+            <a href="index.html" class="px-5 py-2 bg-sky-500 text-white font-semibold rounded-lg shadow-lg hover:bg-sky-600 transition hidden md:inline-block">
+                Back to Platform
+            </a>
+        </div>
+    </header>
 
-<script>
-    // Since we are navigating to a new page, we no longer need the toggleTraining alert.
-    // This script can handle smooth scrolling for the internal anchors.
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
+    <main>
+        <section class="py-16 sm:py-24 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-6">
+                <h1 class="text-4xl font-extrabold text-gray-900 mb-4 text-center">Training & Capability Building</h1>
+                <p class="text-xl text-center text-green-600 font-semibold mb-12">Empower your team with Agentic AI expertise.</p>
+
+                <div class="bg-white shadow-xl rounded-2xl p-8 lg:p-12 border-t-8 border-green-500">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Course Title: AI Innovation for Insurance Professionals</h2>
+
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">Introduction</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            This course provides insurance professionals with the knowledge, tools, and applied skills to leverage AI technologies for innovation, efficiency, and competitive advantage.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">Objectives</h3>
+                        <ul class="list-decimal list-inside pl-4 text-gray-700 space-y-3 marker:font-bold">
+                            <li>Equip participants with a foundational understanding of AI technologies.</li>
+                            <li>Develop the capability to apply AI for underwriting and fraud detection.</li>
+                            <li>Build practical skills in AI innovation using Agentic AI models.</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b pb-2 mb-6">Course Structure</h3>
+
+                    <div class="mb-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Structured Program (36 hours)</h4>
+                        <ol class="list-decimal list-inside pl-4 text-gray-700 space-y-1">
+                            <li>Fundamentals of Artificial Intelligence in Insurance</li>
+                            <li>Generative AI and Large Language Models (LLMs)</li>
+                            <li>Agentic AI: The Next Frontier in Operations</li>
+                            <li>Custom AI Modelling for Underwriting</li>
+                            <li>AI for Claims Management and Fraud Detection</li>
+                            <li>Ethical and Responsible AI in Insurance</li>
+                            <li>Capstone Project: Innovation Roadmap</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-16 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Ready to Enroll Your Team?</h2>
+                <a href="mailto:info@futureinsurance.ai" class="px-10 py-4 bg-green-500 text-white text-lg font-bold rounded-xl shadow-2xl hover:bg-green-600 transition duration-300 inline-block">Request Enrollment Info</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <a href="index.html" class="text-2xl font-extrabold text-white tracking-tight mb-4 inline-block">FutureInsurance<span class="text-sky-400">.ai</span></a>
+            <p class="text-gray-400 text-sm">&copy; 2026 FutureInsurance.ai. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

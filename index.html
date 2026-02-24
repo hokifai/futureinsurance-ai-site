@@ -7,15 +7,21 @@
     <script src="https://cdn.tailwindcss.com"></script> 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        :root { --color-primary: #0f172a; --color-accent: #0ea5e9; }
         
-        /* Prevent horizontal scroll entirely */
+        :root { 
+            --color-primary: #0f172a; 
+            --color-accent: #0ea5e9; 
+        }
+
+        /* Prevents horizontal "wobble" on mobile devices */
         html, body { 
             max-width: 100%;
             overflow-x: hidden;
             font-family: 'Inter', sans-serif; 
             background-color: #f8fafc; 
             scroll-behavior: smooth; 
+            margin: 0;
+            padding: 0;
         }
         
         .ai-gradient-text {
@@ -25,6 +31,7 @@
             background-clip: text;
         }
         
+        /* Mobile Menu Slide-Down Effect */
         #nav-menu {
             display: none;
             opacity: 0;
@@ -41,37 +48,40 @@
         .profit-killer-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
         
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1rem; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1rem; border: 0; }
     </style>
 </head>
 <body class="text-gray-900">
 
     <header class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-2 md:grid-cols-3 items-center">
-            
-            <div class="flex justify-start">
-                <a href="index.html" class="text-xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
-                    FutureInsurance<span class="ai-gradient-text">.ai</span>
-                </a>
-            </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 items-center">
+                
+                <div class="flex justify-start">
+                    <a href="index.html" class="text-xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
+                        FutureInsurance<span class="ai-gradient-text">.ai</span>
+                    </a>
+                </div>
 
-            <nav class="hidden md:flex justify-center items-center space-x-8 lg:space-x-10">
-                <a href="#solutions" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Solutions</a>
-                <a href="#vision" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Our Vision</a>
-                <a href="#market" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Market Focus</a>
-                <a href="training.html" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Training</a>
-                <a href="#contact" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Connect</a>
-            </nav>
+                <nav class="hidden md:flex justify-center items-center space-x-6 lg:space-x-10">
+                    <a href="#solutions" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Solutions</a>
+                    <a href="#vision" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Our Vision</a>
+                    <a href="#market" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Market Focus</a>
+                    <a href="training.html" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Training</a>
+                    <a href="#contact" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Connect</a>
+                </nav>
 
-            <div class="flex justify-end">
-                <button id="menu-toggle" class="md:hidden flex items-center justify-center text-gray-700 hover:text-sky-500 transition focus:outline-none">
-                    <svg id="hamburger" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
+                <div class="flex justify-end">
+                    <button id="menu-toggle" class="md:hidden flex items-center justify-center text-gray-700 hover:text-sky-500 transition focus:outline-none p-1">
+                        <svg id="hamburger" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <div class="hidden md:block w-4"></div>
+                </div>
             </div>
         </div>
 
@@ -81,7 +91,7 @@
                 <a href="#vision" class="menu-link text-2xl font-bold hover:text-sky-500 transition">Our Vision</a>
                 <a href="#market" class="menu-link text-2xl font-bold hover:text-sky-500 transition">Market Focus</a>
                 <a href="training.html" class="menu-link text-2xl font-bold hover:text-sky-500 transition">Training</a>
-                <a href="#contact" class="menu-link text-2xl font-bold hover:text-sky-500 transition text-sky-500">Connect</a>
+                <a href="#contact" class="menu-link text-2xl font-bold text-sky-500 transition">Connect</a>
             </nav>
         </div>
     </header>
@@ -109,23 +119,24 @@
 
         <section id="solutions" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-sky-500 font-bold uppercase tracking-widest text-xs mb-2">ROI in the Insurance Value Chain</p>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">Autonomous Solutions</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
                     <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-red-500 profit-killer-card">
                         <h3 class="text-lg font-bold mb-2">Fraud Defense</h3>
-                        <p class="text-gray-600 text-sm">Investigates and blocks suspicious claims autonomously.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Agentic engines that investigate, flag, and block suspicious claims autonomously.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-sky-500 profit-killer-card">
                         <h3 class="text-lg font-bold mb-2">Claims Resolution</h3>
-                        <p class="text-gray-600 text-sm">Straight-through processing in minutes, not days.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Straight-through processing for claims, reducing cycle times to minutes.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-indigo-500 profit-killer-card">
                         <h3 class="text-lg font-bold mb-2">Underwriting</h3>
-                        <p class="text-gray-600 text-sm">Proactive risk models that adapt in real-time.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Dynamic risk models that proactively adapt pricing based on real-time data.</p>
                     </div>
-                    <a href="training.html" class="bg-white p-8 rounded-xl shadow-md border-t-4 border-green-500 profit-killer-card">
-                        <h3 class="text-lg font-bold mb-2">Training</h3>
-                        <p class="text-gray-600 text-sm">Upskilling for the future of insurance.</p>
+                    <a href="training.html" class="bg-white p-8 rounded-xl shadow-md border-t-4 border-green-500 profit-killer-card block">
+                        <h3 class="text-lg font-bold mb-2">AI Training</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Expert-led upskilling for actuaries and executives to lead AI transformation.</p>
                     </a>
                 </div>
             </div>
@@ -135,7 +146,29 @@
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Our Vision</h2>
                 <div class="video-container shadow-2xl">
-                    <iframe src="https://share.synthesia.io/embeds/videos/16c79fb4-0e73-4895-a747-6971ceb4d73a" loading="lazy"></iframe>
+                    <iframe src="https://share.synthesia.io/embeds/videos/16c79fb4-0e73-4895-a747-6971ceb4d73a" loading="lazy" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="market" class="py-20 bg-white border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 uppercase">ASEAN & GCC Market Focus</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-100">
+                        <h4 class="font-bold text-gray-900 mb-3 text-lg">Data Sovereignty</h4>
+                        <p class="text-gray-600 text-sm">Full compliance with regional data localization and privacy regulations.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-100">
+                        <h4 class="font-bold text-gray-900 mb-3 text-lg">Local NLP</h4>
+                        <p class="text-gray-600 text-sm">Trained on regional languages and specific insurance terminology.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-100">
+                        <h4 class="font-bold text-gray-900 mb-3 text-lg">Legacy Bridging</h4>
+                        <p class="text-gray-600 text-sm">Agents designed to integrate seamlessly with existing core systems.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -144,13 +177,17 @@
             <div class="max-w-3xl mx-auto px-4">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-extrabold uppercase tracking-tight">Connect</h2>
+                    <p class="text-sky-400 mt-2 font-medium">Start your journey to autonomous operations.</p>
                 </div>
                 <div class="bg-white rounded-2xl p-6 md:p-10 text-gray-900 shadow-2xl">
                     <form action="https://formspree.io/f/mwvnblva" method="POST" class="space-y-4">
-                        <input type="text" name="name" placeholder="Name" required class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500">
-                        <input type="email" name="email" placeholder="Email" required class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500">
-                        <textarea name="message" rows="3" placeholder="Message" class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500"></textarea>
-                        <button type="submit" class="w-full py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition uppercase">Request Demo</button>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500">
+                            <input type="email" name="email" placeholder="Work Email" required class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500">
+                        </div>
+                        <input type="text" name="company" placeholder="Company" required class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500">
+                        <textarea name="message" rows="4" placeholder="How can we help?" class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500"></textarea>
+                        <button type="submit" class="w-full py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition uppercase tracking-widest">Request Demo</button>
                     </form>
                 </div>
             </div>
@@ -158,7 +195,10 @@
     </main>
 
     <footer class="bg-gray-950 text-white py-12 text-center">
-        <p class="text-sm text-gray-500 tracking-widest uppercase">&copy; 2026 FutureInsurance.ai</p>
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-xl font-bold mb-2">FutureInsurance<span class="text-sky-400">.ai</span></p>
+            <p class="text-gray-500 text-xs uppercase tracking-widest">&copy; 2026 FutureInsurance.ai</p>
+        </div>
     </footer>
 
     <script>
@@ -168,6 +208,7 @@
         const closeIcon = document.getElementById('close-icon');
         const links = document.querySelectorAll('.menu-link');
 
+        // Toggle mobile menu visibility
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
             menu.classList.toggle('active');
@@ -175,6 +216,7 @@
             closeIcon.classList.toggle('hidden');
         });
 
+        // Close menu when a link is clicked
         links.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('active');
@@ -183,6 +225,7 @@
             });
         });
 
+        // Close menu if clicking anywhere outside of the nav
         document.addEventListener('click', (e) => {
             if (!menu.contains(e.target) && !btn.contains(e.target)) {
                 menu.classList.remove('active');

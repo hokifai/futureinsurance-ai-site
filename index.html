@@ -17,6 +17,7 @@
             background-clip: text;
         }
         
+        /* Menu Dropdown Animation */
         #nav-menu {
             display: none;
             opacity: 0;
@@ -39,24 +40,23 @@
 <body class="text-gray-900">
 
     <header class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex-shrink-0 w-1/4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            
+            <div class="flex-shrink-0 w-48">
                 <a href="index.html" class="text-xl font-extrabold text-gray-900 tracking-tight">
                     FutureInsurance<span class="ai-gradient-text">.ai</span>
                 </a>
             </div>
 
-            <nav class="hidden md:flex flex-grow justify-center items-center space-x-8">
-                <a href="#solutions" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Solutions</a>
-                <a href="#vision" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Our Vision</a>
-                <a href="#market" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Market Focus</a>
-                <a href="training.html" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Training</a>
-                <a href="mailto:hello@futureinsurance.ai" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Contact Us</a>
+            <nav class="hidden md:flex flex-grow justify-center items-center space-x-10">
+                <a href="#solutions" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Solutions</a>
+                <a href="#vision" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Our Vision</a>
+                <a href="#market" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Market Focus</a>
+                <a href="training.html" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Training</a>
+                <a href="#contact" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Connect</a>
             </nav>
 
-            <div class="flex-shrink-0 w-1/4 flex justify-end">
-                <a href="#contact" class="hidden md:block px-5 py-2 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition text-sm">Connect</a>
-                
+            <div class="flex-shrink-0 w-48 flex justify-end">
                 <button id="menu-toggle" class="md:hidden flex items-center space-x-2 text-gray-700 hover:text-sky-500 transition focus:outline-none border border-gray-200 px-3 py-2 rounded-lg">
                     <span class="text-sm font-bold uppercase tracking-wider">Menu</span>
                     <svg id="hamburger" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,8 +75,7 @@
                 <a href="#vision" class="menu-link text-2xl font-bold hover:text-sky-500 transition">Our Vision</a>
                 <a href="#market" class="menu-link text-2xl font-bold hover:text-sky-500 transition">Market Focus</a>
                 <a href="training.html" class="menu-link text-2xl font-bold hover:text-sky-500 transition">Training</a>
-                <a href="mailto:hello@futureinsurance.ai" class="menu-link text-2xl font-bold hover:text-sky-500 transition">Contact Us</a>
-                <a href="#contact" class="menu-link px-8 py-3 bg-sky-500 text-white font-bold rounded-lg transition">Connect</a>
+                <a href="#contact" class="menu-link text-2xl font-bold hover:text-sky-500 transition">Connect</a>
             </nav>
         </div>
     </header>
@@ -93,7 +92,7 @@
                     FutureInsurance.ai is the B2B Agentic AI platform that enables <span class="text-white font-semibold underline decoration-sky-500">zero-touch insurance</span>.
                 </p>
                 <div class="flex justify-center">
-                    <a href="#contact" class="px-8 py-4 bg-sky-500 text-white font-bold rounded-lg shadow-xl hover:bg-sky-600 transition text-lg">Scale Your Operations</a>
+                    <a href="#contact" class="px-8 py-4 bg-sky-500 text-white font-bold rounded-lg shadow-xl hover:bg-sky-600 transition text-lg uppercase tracking-wider">Connect With Us</a>
                 </div>
             </div>
             <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -104,6 +103,7 @@
 
         <section id="solutions" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-sky-500 font-bold uppercase tracking-widest text-sm mb-2">Generating AI insights in the insurance value chain</p>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">Autonomous Solutions Delivering Measurable ROI</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
                     <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-500 profit-killer-card">
@@ -120,7 +120,7 @@
                     </div>
                     <a href="training.html" class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500 profit-killer-card block group transition-all">
                         <h3 class="text-xl font-bold mb-4 group-hover:text-green-600 transition">AI Training & Upskilling</h3>
-                        <p class="text-gray-600 text-sm mb-4">Programs for actuaries and executives to master Agentic AI deployment.</p>
+                        <p class="text-gray-600 text-sm mb-4">Comprehensive programs for actuaries and executives to master Agentic AI deployment.</p>
                         <span class="text-green-600 font-bold text-xs uppercase tracking-wider group-hover:underline">View Course Details →</span>
                     </a>
                 </div>
@@ -148,7 +148,7 @@
                     </div>
                     <div class="bg-gray-50 p-8 rounded-lg border border-gray-100">
                         <h4 class="font-bold text-gray-900 mb-3 text-xl">Multilingual Processing</h4>
-                        <p class="text-gray-600 text-sm">Native NLP capabilities trained specifically on regional dialects.</p>
+                        <p class="text-gray-600 text-sm">Native NLP capabilities trained specifically on regional dialects and technical insurance terminology.</p>
                     </div>
                     <div class="bg-gray-50 p-8 rounded-lg border border-gray-100">
                         <h4 class="font-bold text-gray-900 mb-3 text-xl">Seamless Legacy Integration</h4>
@@ -165,25 +165,34 @@
             </div>
             <div class="max-w-3xl mx-auto px-4">
                 <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl text-gray-900">
-                    <form action="https://formspree.io/f/mwvnblva" method="POST" class="space-y-4 text-center">
+                    <form action="https://formspree.io/f/mwvnblva" method="POST" class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200">
-                            <input type="email" name="email" placeholder="Work Email" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200">
+                            <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-sky-500">
+                            <input type="email" name="email" placeholder="Work Email" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-sky-500">
                         </div>
-                        <input type="text" name="company" placeholder="Company Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200">
-                        <textarea name="message" rows="4" placeholder="Briefly describe your goals..." class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200"></textarea>
+                        <input type="text" name="company" placeholder="Company Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-sky-500">
+                        <textarea name="message" rows="4" placeholder="Briefly describe your goals..." class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-sky-500"></textarea>
                         <button type="submit" class="w-full py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition shadow-lg text-lg uppercase tracking-wider">
                             Request Demo
                         </button>
                     </form>
+                    <div class="mt-8 pt-8 border-t border-gray-100 text-center">
+                        <p class="text-gray-500 font-medium">Email us directly: 
+                            <a href="mailto:hello@futureinsurance.ai" class="text-sky-500 hover:text-sky-600 font-bold transition ml-1 underline decoration-2 underline-offset-4">
+                                hello@futureinsurance.ai
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-950 text-white py-12 text-center">
-        <p class="text-xl font-bold mb-4">FutureInsurance<span class="text-sky-400">.ai</span></p>
-        <p class="text-gray-500 text-xs uppercase tracking-widest">&copy; 2025 FutureInsurance.ai</p>
+    <footer class="bg-gray-950 text-white py-16 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-2xl font-bold mb-4 tracking-tighter">FutureInsurance<span class="text-sky-400">.ai</span></p>
+            <p class="text-gray-500 text-xs tracking-widest uppercase mb-4">&copy; 2025 FutureInsurance.ai. Scaling Autonomous Insurance Operations.</p>
+        </div>
     </footer>
 
     <script>
@@ -193,6 +202,7 @@
         const closeIcon = document.getElementById('close-icon');
         const links = document.querySelectorAll('.menu-link');
 
+        // Toggle mobile menu
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
             menu.classList.toggle('active');
@@ -200,6 +210,7 @@
             closeIcon.classList.toggle('hidden');
         });
 
+        // Close menu when clicking a link
         links.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('active');
@@ -208,6 +219,7 @@
             });
         });
 
+        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!menu.contains(e.target) && !btn.contains(e.target)) {
                 menu.classList.remove('active');

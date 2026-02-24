@@ -8,7 +8,15 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         :root { --color-primary: #0f172a; --color-accent: #0ea5e9; }
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        
+        /* Prevent horizontal scroll entirely */
+        html, body { 
+            max-width: 100%;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc; 
+            scroll-behavior: smooth; 
+        }
         
         .ai-gradient-text {
             background: linear-gradient(90deg, #0ea5e9, #38bdf8, #a5f3fc);
@@ -17,7 +25,6 @@
             background-clip: text;
         }
         
-        /* Mobile Menu Animation */
         #nav-menu {
             display: none;
             opacity: 0;
@@ -40,15 +47,15 @@
 <body class="text-gray-900">
 
     <header class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-2 md:grid-cols-3 items-center">
             
-            <div class="flex-shrink-0 w-48">
-                <a href="index.html" class="text-xl font-extrabold text-gray-900 tracking-tight">
+            <div class="flex justify-start">
+                <a href="index.html" class="text-xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
                     FutureInsurance<span class="ai-gradient-text">.ai</span>
                 </a>
             </div>
 
-            <nav class="hidden md:flex flex-grow justify-center items-center space-x-10">
+            <nav class="hidden md:flex justify-center items-center space-x-8 lg:space-x-10">
                 <a href="#solutions" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Solutions</a>
                 <a href="#vision" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Our Vision</a>
                 <a href="#market" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Market Focus</a>
@@ -56,8 +63,8 @@
                 <a href="#contact" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition whitespace-nowrap">Connect</a>
             </nav>
 
-            <div class="flex-shrink-0 w-48 flex justify-end">
-                <button id="menu-toggle" class="md:hidden flex items-center justify-center text-gray-700 hover:text-sky-500 transition focus:outline-none p-2">
+            <div class="flex justify-end">
+                <button id="menu-toggle" class="md:hidden flex items-center justify-center text-gray-700 hover:text-sky-500 transition focus:outline-none">
                     <svg id="hamburger" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -80,18 +87,18 @@
     </header>
 
     <main>
-        <section class="py-24 bg-gray-900 text-white text-center relative overflow-hidden">
+        <section class="py-20 md:py-32 bg-gray-900 text-white text-center relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 relative z-10">
-                <p class="text-sky-400 font-bold mb-4 tracking-widest uppercase text-sm">Goal-Driven Automation for Insurers</p>
-                <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight">
-                    Agentic AI Powering <br>
-                    <span class="ai-gradient-text">Autonomous Insurance Operations</span>
+                <p class="text-sky-400 font-bold mb-4 tracking-widest uppercase text-xs md:text-sm">Goal-Driven Automation for Insurers</p>
+                <h1 class="text-4xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight px-2">
+                    Agentic AI Powering <br class="hidden md:block">
+                    <span class="ai-gradient-text">Autonomous Operations</span>
                 </h1>
-                <p class="text-xl md:text-2xl max-w-4xl mx-auto mb-12 text-gray-300 leading-relaxed">
-                    FutureInsurance.ai is the B2B Agentic AI platform that enables <span class="text-white font-semibold underline decoration-sky-500">zero-touch insurance</span>.
+                <p class="text-lg md:text-2xl max-w-3xl mx-auto mb-12 text-gray-300 px-4">
+                    The B2B Agentic AI platform enabling <span class="text-white font-semibold underline decoration-sky-500">zero-touch insurance</span>.
                 </p>
                 <div class="flex justify-center">
-                    <a href="#contact" class="px-8 py-4 bg-sky-500 text-white font-bold rounded-lg shadow-xl hover:bg-sky-600 transition text-lg uppercase tracking-widest">Connect With Us</a>
+                    <a href="#contact" class="px-8 py-4 bg-sky-500 text-white font-bold rounded-lg shadow-xl hover:bg-sky-600 transition text-sm md:text-lg uppercase tracking-widest">Connect With Us</a>
                 </div>
             </div>
             <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -102,78 +109,48 @@
 
         <section id="solutions" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 text-center">
-                <p class="text-sky-500 font-bold uppercase tracking-widest text-sm mb-2">Generating AI insights in the insurance value chain</p>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">Autonomous Solutions Delivering Measurable ROI</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-500 profit-killer-card">
-                        <h3 class="text-xl font-bold mb-4">Autonomous Fraud Defense</h3>
-                        <p class="text-gray-600 text-sm">Our Agentic Fraud Engine independently investigates, flags, and blocks suspicious claims.</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">Autonomous Solutions</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-red-500 profit-killer-card">
+                        <h3 class="text-lg font-bold mb-2">Fraud Defense</h3>
+                        <p class="text-gray-600 text-sm">Investigates and blocks suspicious claims autonomously.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-sky-500 profit-killer-card">
-                        <h3 class="text-xl font-bold mb-4">Instant Claims Resolution</h3>
-                        <p class="text-gray-600 text-sm">Agents autonomously process straight-through claims, initiating payment in minutes.</p>
+                    <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-sky-500 profit-killer-card">
+                        <h3 class="text-lg font-bold mb-2">Claims Resolution</h3>
+                        <p class="text-gray-600 text-sm">Straight-through processing in minutes, not days.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-indigo-500 profit-killer-card">
-                        <h3 class="text-xl font-bold mb-4">Adaptive Underwriting</h3>
-                        <p class="text-gray-600 text-sm">Agentic Modules proactively adapt risk models and pricing in real-time.</p>
+                    <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-indigo-500 profit-killer-card">
+                        <h3 class="text-lg font-bold mb-2">Underwriting</h3>
+                        <p class="text-gray-600 text-sm">Proactive risk models that adapt in real-time.</p>
                     </div>
-                    <a href="training.html" class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500 profit-killer-card block group transition-all">
-                        <h3 class="text-xl font-bold mb-4 group-hover:text-green-600 transition">AI Training & Upskilling</h3>
-                        <p class="text-gray-600 text-sm mb-4">Programs for actuaries and executives to master Agentic AI deployment.</p>
-                        <span class="text-green-600 font-bold text-xs uppercase tracking-wider group-hover:underline">View Course Details →</span>
+                    <a href="training.html" class="bg-white p-8 rounded-xl shadow-md border-t-4 border-green-500 profit-killer-card">
+                        <h3 class="text-lg font-bold mb-2">Training</h3>
+                        <p class="text-gray-600 text-sm">Upskilling for the future of insurance.</p>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="vision" class="py-20 bg-slate-50 border-t border-b border-gray-200">
+        <section id="vision" class="py-20 bg-slate-50 border-y border-gray-200">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">The Future of Insurance, Articulated by AI</h2>
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Our Vision</h2>
                 <div class="video-container shadow-2xl">
-                    <iframe src="https://share.synthesia.io/embeds/videos/16c79fb4-0e73-4895-a747-6971ceb4d73a" loading="lazy" title="Vision Video" allowfullscreen allow="encrypted-media; fullscreen;" style="border: 0;"></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section id="market" class="py-20 bg-white border-b border-gray-100">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 uppercase">Built for ASEAN & GCC</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-100">
-                        <h4 class="font-bold text-gray-900 mb-3 text-xl">Regional Sovereignty</h4>
-                        <p class="text-gray-600 text-sm">Full compliance with local data localization and privacy laws.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-100">
-                        <h4 class="font-bold text-gray-900 mb-3 text-xl">Multilingual NLP</h4>
-                        <p class="text-gray-600 text-sm">Native processing trained on regional dialects and terminology.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-100">
-                        <h4 class="font-bold text-gray-900 mb-3 text-xl">Legacy Integration</h4>
-                        <p class="text-gray-600 text-sm">Bridging COBOL core systems with modern agentic interfaces.</p>
-                    </div>
+                    <iframe src="https://share.synthesia.io/embeds/videos/16c79fb4-0e73-4895-a747-6971ceb4d73a" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="py-20 bg-gray-900 text-white">
-            <div class="max-w-4xl mx-auto px-4 text-center mb-12">
-                <h2 class="text-4xl font-extrabold mb-4 uppercase tracking-tight">Connect</h2>
-                <p class="text-sky-400 text-xl font-medium mb-8">Deploying Agentic AI in 90 days.</p>
-            </div>
             <div class="max-w-3xl mx-auto px-4">
-                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl text-gray-900">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-extrabold uppercase tracking-tight">Connect</h2>
+                </div>
+                <div class="bg-white rounded-2xl p-6 md:p-10 text-gray-900 shadow-2xl">
                     <form action="https://formspree.io/f/mwvnblva" method="POST" class="space-y-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-sky-500 outline-none">
-                            <input type="email" name="email" placeholder="Work Email" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-sky-500 outline-none">
-                        </div>
-                        <input type="text" name="company" placeholder="Company Name" required class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-sky-500 outline-none">
-                        <textarea name="message" rows="4" placeholder="How can we help?" class="w-full p-4 rounded-lg bg-gray-50 border border-gray-200 focus:border-sky-500 outline-none"></textarea>
-                        <button type="submit" class="w-full py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition shadow-lg text-lg uppercase">
-                            Request Demo
-                        </button>
+                        <input type="text" name="name" placeholder="Name" required class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500">
+                        <input type="email" name="email" placeholder="Email" required class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500">
+                        <textarea name="message" rows="3" placeholder="Message" class="w-full p-4 bg-gray-50 border rounded-lg outline-none focus:border-sky-500"></textarea>
+                        <button type="submit" class="w-full py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition uppercase">Request Demo</button>
                     </form>
                 </div>
             </div>
@@ -181,8 +158,7 @@
     </main>
 
     <footer class="bg-gray-950 text-white py-12 text-center">
-        <p class="text-xl font-bold mb-2">FutureInsurance<span class="text-sky-400">.ai</span></p>
-        <p class="text-gray-500 text-xs uppercase tracking-widest">&copy; 2026 FutureInsurance.ai</p>
+        <p class="text-sm text-gray-500 tracking-widest uppercase">&copy; 2026 FutureInsurance.ai</p>
     </footer>
 
     <script>

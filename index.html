@@ -17,7 +17,6 @@
             background-clip: text;
         }
         
-        /* Menu Dropdown Animation */
         #nav-menu {
             display: none;
             opacity: 0;
@@ -45,33 +44,40 @@
                 FutureInsurance<span class="ai-gradient-text">.ai</span>
             </a>
 
-            <div class="flex items-center space-x-4">
-                <a href="#contact" class="hidden sm:block px-5 py-2 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition text-sm">Partner with Us</a>
-                
-                <button id="menu-toggle" class="flex items-center space-x-2 text-gray-700 hover:text-sky-500 transition focus:outline-none border border-gray-200 px-3 py-2 rounded-lg">
-                    <span class="text-sm font-bold uppercase tracking-wider">Menu</span>
-                    <svg id="hamburger" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#solutions" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Solutions</a>
+                <a href="#vision" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Our Vision</a>
+                <a href="#market" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Market Focus</a>
+                <div class="h-4 w-px bg-gray-200"></div>
+                <a href="training.html" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Training</a>
+                <a href="mailto:hello@futureinsurance.ai" class="text-sm font-semibold text-gray-600 hover:text-sky-500 transition">Contact Us</a>
+                <a href="#contact" class="px-5 py-2 bg-sky-500 text-white font-semibold rounded-lg shadow-md hover:bg-sky-600 transition text-sm">Connect</a>
+            </nav>
+
+            <button id="menu-toggle" class="md:hidden flex items-center space-x-2 text-gray-700 hover:text-sky-500 transition focus:outline-none border border-gray-200 px-3 py-2 rounded-lg">
+                <span class="text-sm font-bold uppercase tracking-wider">Menu</span>
+                <svg id="hamburger" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
 
-        <div id="nav-menu" class="absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl">
-            <nav class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div id="nav-menu" class="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl">
+            <nav class="px-6 py-8 space-y-6">
                 <div class="space-y-4">
                     <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Platform</p>
                     <a href="#solutions" class="menu-link block text-xl font-semibold hover:text-sky-500 transition">Solutions</a>
                     <a href="#vision" class="menu-link block text-xl font-semibold hover:text-sky-500 transition">Our Vision</a>
                     <a href="#market" class="menu-link block text-xl font-semibold hover:text-sky-500 transition">Market Focus</a>
                 </div>
+                <hr class="border-gray-100">
                 <div class="space-y-4">
                     <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Connect</p>
-                    <a href="#solutions" class="menu-link block text-xl font-semibold hover:text-sky-500 transition">Training</a>
-                    <a href="#contact" class="menu-link block text-xl font-semibold hover:text-sky-500 transition">Contact Us</a>
+                    <a href="training.html" class="menu-link block text-xl font-semibold hover:text-sky-500 transition">Training</a>
+                    <a href="mailto:hello@futureinsurance.ai" class="menu-link block text-xl font-semibold hover:text-sky-500 transition">Contact Us</a>
                     <a href="#contact" class="menu-link block text-xl font-semibold text-sky-500 transition">Partner with Us →</a>
                 </div>
             </nav>
@@ -116,11 +122,11 @@
                         <h3 class="text-xl font-bold mb-4">Adaptive Underwriting</h3>
                         <p class="text-gray-600 text-sm">Agentic Modules proactively adapt risk models and pricing in real-time.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500 profit-killer-card block group transition-all">
+                    <a href="training.html" class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500 profit-killer-card block group transition-all">
                         <h3 class="text-xl font-bold mb-4 group-hover:text-green-600 transition">AI Training & Upskilling</h3>
                         <p class="text-gray-600 text-sm mb-4">Comprehensive programs for actuaries and executives to master Agentic AI deployment.</p>
                         <span class="text-green-600 font-bold text-xs uppercase tracking-wider group-hover:underline">View Course Details →</span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -174,23 +180,14 @@
                             Request Demo
                         </button>
                     </form>
-                    <div class="mt-8 pt-8 border-t border-gray-100 text-center">
-                        <p class="text-gray-500 font-medium">Contact Us: 
-                            <a href="mailto:hello@futureinsurance.ai" class="text-sky-500 hover:text-sky-600 font-bold transition ml-1 underline decoration-2 underline-offset-4">
-                                hello@futureinsurance.ai
-                            </a>
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-950 text-white py-16 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <p class="text-2xl font-bold mb-4 tracking-tighter">FutureInsurance<span class="text-sky-400">.ai</span></p>
-            <p class="text-gray-500 text-xs tracking-widest uppercase mb-4">&copy; 2025 FutureInsurance.ai. Scaling Autonomous Insurance Operations.</p>
-        </div>
+    <footer class="bg-gray-950 text-white py-12 text-center border-t border-gray-900">
+        <p class="text-xl font-bold mb-4">FutureInsurance<span class="text-sky-400">.ai</span></p>
+        <p class="text-gray-500 text-xs uppercase tracking-widest">&copy; 2025 FutureInsurance.ai</p>
     </footer>
 
     <script>
@@ -202,11 +199,12 @@
 
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            menu.classList.toggle('active');
+            const isActive = menu.classList.toggle('active');
             hamburger.classList.toggle('hidden');
             closeIcon.classList.toggle('hidden');
         });
 
+        // Close menu when clicking links
         links.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('active');
@@ -215,6 +213,7 @@
             });
         });
 
+        // Close menu clicking outside
         document.addEventListener('click', (e) => {
             if (!menu.contains(e.target) && !btn.contains(e.target)) {
                 menu.classList.remove('active');
